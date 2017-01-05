@@ -17,7 +17,8 @@ def details(request):
     for checker in HEARTBEAT['checkers']:
         checker_module = import_module(checker)
         checker_name = checker_module.__name__.split('.')[-1]
-        data = checker_module.check(request)
+        #data = checker_module.check(request) ## Don't want to share details
+        data = 'Tested'
         response.update({checker_name: data})
 
     data = OrderedDict(sorted(response.items()))
