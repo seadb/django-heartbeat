@@ -8,7 +8,7 @@ from .settings import HEARTBEAT
 
 
 def index(request):
-    return HttpResponse(content='all good in the hood')
+    return HttpResponse(content='Application up')
 
 
 @auth
